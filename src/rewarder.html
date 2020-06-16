@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>BitCollect</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/sticky-footer-navbar.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">BitCollect</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="create.html">Create </a>
+                </li>
+                <li class="nav-item active ">
+                    <a class="nav-link" href="#">Reward <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="close.html">Close </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="disable.html">Disable</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<main role="main" class="container">
+    <h1 class="mt-5">Add a milestone reward</h1>
+    <form id="rewards-form" onsubmit="App.addReward();return false;">
+        <div class="form-group">
+            <label for="campaign-rewarder">Campaign</label>
+            <input type="text" class="form-control" id="campaign-rewarder" placeholder="Address">
+        </div>
+        <div class="form-group">
+            <label for="milestones-rewarder">Milestones</label>
+            <input type="text" class="form-control" id="milestones-rewarder" placeholder="Milestones">
+        </div>
+        <div class="form-group">
+            <label for="rewards-rewarder">Rewards</label>
+            <input type="text" class="form-control" id="rewards-rewarder" placeholder="Rewards">
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+    <hr class="my-4">
+    <h3 class="mt-5">Take back reward from fraudolent campaign:</h3>
+    <form id="take-back-form" onsubmit="App.takeBackReward();return false;">
+        <div class="form-group">
+            <label for="campaign-address">Fraudolent campaign:</label>
+            <input type="text" class="form-control" id="campaign-address" placeholder="Address">
+        </div>
+        <button type="submit" class="btn btn-danger">Take back</button>
+    </form>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <span class="text-muted">Peer to Peer Systems and Blockchains - 2020 - Università di Pisa - Santi Gianmarco - 607016</span>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
+
+
